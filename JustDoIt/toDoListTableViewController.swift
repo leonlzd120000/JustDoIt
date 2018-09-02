@@ -12,8 +12,14 @@ class toDoListTableViewController: UITableViewController {
 
     var itemArray = ["Apple"]
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let items = defaults.array(forKey: "toDoListArray") as? [String]{
+            itemArray = items
+        }
         
     }
 
@@ -76,6 +82,8 @@ class toDoListTableViewController: UITableViewController {
     let action = UIAlertAction(title: "OK", style: .default) { (action) in
         
         // what will happen once the button pressed
+        
+        self.defaults.set(self.itemArray,forKey: "toDoListArray")
         
         self.itemArray.append(textField.text!)
         
