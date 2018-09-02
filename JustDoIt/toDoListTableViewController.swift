@@ -10,11 +10,11 @@ import UIKit
 
 class toDoListTableViewController: UITableViewController {
 
-    let itemArray = ["Apple","Banana","Pear","Watermellon","Pine Apple"]
+    var itemArray = ["Apple"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +45,7 @@ class toDoListTableViewController: UITableViewController {
     //MARK-TableView Delegate Method
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row + 1)
+        print(indexPath.row)
     
         //Add checkmark
         
@@ -59,6 +59,8 @@ class toDoListTableViewController: UITableViewController {
         //Delete the effect
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        print(itemArray[indexPath.row])
     
     }
     
@@ -66,11 +68,27 @@ class toDoListTableViewController: UITableViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
     
+    var textField = UITextField()
+        
     let alert = UIAlertController(title: "Add new item", message: "add new item to the list", preferredStyle: .alert)
+        
     
     let action = UIAlertAction(title: "OK", style: .default) { (action) in
-            // what will happen once the button pressed
-        print("add successfully!")
+        
+        // what will happen once the button pressed
+        
+        self.itemArray.append(textField.text!)
+        
+        self.tableView.reloadData()
+        
+        print(textField.text!)
+        
+        }
+        
+        alert.addTextField { (alertTextFiled) in
+            alertTextFiled.placeholder = "Add new item"
+            textField = alertTextFiled
+        
         }
         
         alert.addAction(action)
