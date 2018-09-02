@@ -12,6 +12,7 @@
 		3590527A213A90C800C0D25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35905279213A90C800C0D25D /* Assets.xcassets */; };
 		3590527D213A90C800C0D25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3590527B213A90C800C0D25D /* LaunchScreen.storyboard */; };
 		35905285213A911200C0D25D /* toDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35905284213A911200C0D25D /* toDoListTableViewController.swift */; };
+		35905287213B873900C0D25D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35905286213B873900C0D25D /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3590527C213A90C800C0D25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3590527E213A90C800C0D25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35905284213A911200C0D25D /* toDoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoListTableViewController.swift; sourceTree = "<group>"; };
+		35905286213B873900C0D25D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				35905272213A90C700C0D25D /* AppDelegate.swift */,
 				35905284213A911200C0D25D /* toDoListTableViewController.swift */,
+				35905286213B873900C0D25D /* Item.swift */,
 				35905276213A90C700C0D25D /* Main.storyboard */,
 				35905279213A90C800C0D25D /* Assets.xcassets */,
 				3590527B213A90C800C0D25D /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35905273213A90C700C0D25D /* AppDelegate.swift in Sources */,
+				35905287213B873900C0D25D /* Item.swift in Sources */,
 				35905285213A911200C0D25D /* toDoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
