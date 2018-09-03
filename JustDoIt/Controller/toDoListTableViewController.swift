@@ -61,12 +61,18 @@ class toDoListTableViewController: UITableViewController {
     
         //Add checkmark
         
-        if itemArray[indexPath.row].done == false{
-            itemArray[indexPath.row].done = true
-        }
-        else{
-            itemArray[indexPath.row].done = false
-        }
+        context.delete(itemArray[indexPath.row])
+        
+        itemArray.remove(at: indexPath.row)
+       
+        
+//
+//        if itemArray[indexPath.row].done == false{
+//            itemArray[indexPath.row].done = true
+//        }
+//        else{
+//            itemArray[indexPath.row].done = false
+//        }
         
         saveItems()
         
